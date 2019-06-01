@@ -29,7 +29,7 @@ public class CraftListener implements Listener {
             
             Player p = (Player) le;
             
-            if (!p.hasPermission("craftcontrol.bypass")) {
+            if (p.hasPermission("craftcontrol.bypass")) {
                 return;
             }
         }
