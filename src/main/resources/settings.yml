@@ -1,0 +1,13 @@
+# This is the item that will appear as the result of a recipe when the normal
+# result is blacklisted.
+banned-result-item:
+  material: BARRIER
+  displayname: '&c&lRecipe Disabled'
+  lore:
+    - '&fYou are not allowed to craft that item!'
+
+# Put all materials you want blacklisted here. Please be sure that you're
+# putting in a valid material name or there could be errors on startup.
+banned-materials:
+  - ANVIL
+  - WOODEN_AXE

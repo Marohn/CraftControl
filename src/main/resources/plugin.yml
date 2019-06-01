@@ -1,0 +1,21 @@
+name: ${project.artifactId}
+main: ${mainClass}
+version: ${project.version}
+author: ${author}
+
+permissions:
+  craftcontrol.*: # Grants player all permissions for this plugin. Not recommended.
+    default: false
+    children:
+      craftcontrol.help: true
+      craftcontrol.list: true
+      craftcontrol.reload: true
+      craftcontrol.bypass: true
+  craftcontrol.help: # Allows player to view the help for this plugin.
+    default: false
+  craftcontrol.list: # Allows the player to view a list of blacklisted items defined in the config.
+    default: false
+  craftcontrol.reload: # Allows the player to reload the config.
+    default: false
+  craftcontrol.bypass: # Allows the player to bypass all crafting restrictions set by this plugin.
+    default: false
