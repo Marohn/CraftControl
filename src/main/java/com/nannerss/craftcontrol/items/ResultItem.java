@@ -1,4 +1,4 @@
-package com.nannerss.craftcontrol;
+package com.nannerss.craftcontrol.items;
 
 import java.util.List;
 
@@ -7,6 +7,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 import com.nannerss.bananalib.utils.Utils;
+import com.nannerss.craftcontrol.Settings;
 
 import lombok.Getter;
 

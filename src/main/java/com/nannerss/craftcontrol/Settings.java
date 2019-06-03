@@ -27,6 +27,19 @@ public class Settings {
         BANNED_MATERIALS = getMaterialList("banned-materials");
     }
     
+    public static void save() {
+        cfg = CraftControl.getSettings();
+        
+        List<String> list = new ArrayList<>();
+        
+        for (Material material : BANNED_MATERIALS) {
+            list.add(material.toString());
+        }
+        
+        cfg.set("banned-materials", list);
+        cfg.saveConfig();
+    }
+    
     private static List<String> getLoreList(String path) {
         List<String> original = cfg.getStringList("banned-result-item.lore");
         List<String> colorized = new ArrayList<>();
