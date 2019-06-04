@@ -9,8 +9,11 @@ import com.nannerss.bananalib.utils.Registrar;
 import com.nannerss.craftcontrol.commands.CraftControlCommand;
 import com.nannerss.craftcontrol.listeners.CraftListener;
 import com.nannerss.craftcontrol.listeners.JoinListener;
+import com.nannerss.craftcontrol.utils.Metrics;
+import com.nannerss.craftcontrol.utils.Updater;
 
 import lombok.Getter;
+import net.md_5.bungee.api.chat.TextComponent;
 
 public class CraftControl extends JavaPlugin {
     
@@ -37,10 +40,12 @@ public class CraftControl extends JavaPlugin {
     
             @Override
             public void onUpdateAvailable() {
-                Console.log(getUpdateMessage());
+                Console.log(TextComponent.toPlainText(getUpdateMessage()));
             }
             
         }.runTaskAsynchronously(this);
+        
+        Metrics metrics = new Metrics(this);
     }
     
     @Override

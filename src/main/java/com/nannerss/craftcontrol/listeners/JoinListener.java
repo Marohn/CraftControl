@@ -8,9 +8,8 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.scheduler.BukkitRunnable;
 
-import com.nannerss.bananalib.messages.Messages;
 import com.nannerss.craftcontrol.CraftControl;
-import com.nannerss.craftcontrol.Updater;
+import com.nannerss.craftcontrol.utils.Updater;
 
 public class JoinListener implements Listener {
     
@@ -22,14 +21,14 @@ public class JoinListener implements Listener {
             
             @Override
             public void run() {
-                if (p.isOp() && Updater.updateAvailable()) {
+                if (p.hasPermission("craftcontrol.update") && Updater.updateAvailable()) {
                     if (Bukkit.getVersion().contains("1.8")) {
                         p.playSound(p.getLocation(), Sound.valueOf("CHICKEN_EGG_POP"), 1F, 1F);
                     } else {
                         p.playSound(p.getLocation(), Sound.valueOf("ENTITY_CHICKEN_EGG"), 1F, 1F);
                     }
                     
-                    Messages.sendMessage(p, Updater.getUpdateMessage());
+                    p.spigot().sendMessage(Updater.getUpdateMessage());
                 }
             }
             
