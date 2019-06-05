@@ -43,6 +43,8 @@ public class CraftControlCommand extends Command {
                     "",
                     "&b/craftcontrol &3help &8- &7Displays this help page.",
                     "&b/craftcontrol &3list &8- &7Lists items that are unable to be crafted.",
+                    "&b/craftcontrol &3add <material> &8- &7Adds the specified material to the blacklisted recipes list.",
+                    "&b/craftcontrol &3remove <material> &8- &7Removes the specified material from the blacklisted recipes list.",
                     "&b/craftcontrol &3reload &8- &7Reloads the config.",
                     "");
         } else if ("list".equalsIgnoreCase(parameter)) {
