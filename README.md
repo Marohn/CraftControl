@@ -9,19 +9,20 @@ is list which items' recipes you want to disable in the config. It's that easy!
 - /craftcontrol - The base command for the plugin.
 - /craftcontrol help - Lists the available commands for the plugin.
 - /craftcontrol list - Lists which items' recipes are blocked.
-- /craftcontrol reload - Reloads the config, so you don't have to restart your server
-when you add or remove something from the blocked recipes list!
 - /craftcontrol add <material> - Add a blacklisted recipe directly in-game.
 - /craftcontrol remove <material> - Remove a blacklisted recipe directly from the game.
+- /craftcontrol reload - Reloads the config, so you don't have to restart your server
+when you add or remove something from the blocked recipes list!
 
 ## Permissions
 - craftcontrol.* - Gives the user every permission every permission within this plugin.
 - craftcontrol.help - Allows the player to use /craftcontrol help.
 - craftcontrol.list - Allows the player to use /craftcontrol list.
-- craftcontrol.reload - Allows the player to reload the config file.
-- craftcontrol.bypass - Allows the player to bypass crafting restrictions and craft the item as you would normally do so.
 - craftcontrol.add - Allows the player to use /craftcontrol add.
 - craftcontrol.remove - Allows the player to use /craftcontrol remove.
+- craftcontrol.reload - Allows the player to reload the config file.
+- craftcontrol.bypass - Allows the player to bypass crafting restrictions and craft the item as you would normally do so.
+- craftcontrol.update - Allows the player to recieve a plugin update notification when they join.
 
 ## How do I set it up?
 1) Download the plugin jar from the SpigotMC website.
