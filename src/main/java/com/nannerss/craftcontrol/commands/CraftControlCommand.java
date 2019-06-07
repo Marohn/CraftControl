@@ -11,12 +11,10 @@ import org.bukkit.entity.Player;
 
 import com.nannerss.bananalib.messages.Component;
 import com.nannerss.bananalib.messages.Messages;
-import com.nannerss.bananalib.utils.Utils;
 import com.nannerss.craftcontrol.CraftControl;
 import com.nannerss.craftcontrol.Settings;
 
 import net.md_5.bungee.api.chat.BaseComponent;
-import net.md_5.bungee.api.chat.TextComponent;
 
 public class CraftControlCommand extends Command {
     
@@ -74,7 +72,7 @@ public class CraftControlCommand extends Command {
                     "");
             
             for (Material material : BANNED_MATERIALS) {
-                BaseComponent[] message = Component.builder(" &8- ").append("&b" + WordUtils.capitalize(material.toString().toLowerCase().replace("_", " "))).onHover("&b&lClick &r&7to remove!").onClickRunCmd("/craftcontrol remove " + material.toString()).create();
+                BaseComponent[] message = Component.builder(" &8- ").append("&b" + WordUtils.capitalize(material.toString().toLowerCase().replace("_", " "))).onHover("&6&lClick&r&f to remove!").onClickRunCmd("/craftcontrol remove " + material.toString()).create();
                 p.spigot().sendMessage(message);
             }
     

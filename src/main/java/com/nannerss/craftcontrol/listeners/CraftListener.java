@@ -42,7 +42,7 @@ public class CraftListener implements Listener {
         Recipe recipe = e.getRecipe();
         
         for (Material material : BANNED) {
-            if (e.getRecipe().getResult().getType().equals(material)) {
+            if (e.getRecipe().getResult().getType().equals(material) && !e.getRecipe().getResult().hasItemMeta()) {
                 e.getInventory().setResult(RESULT);
             }
         }
