@@ -13,6 +13,7 @@ permissions:
       craftcontrol.bypass: true
       craftcontrol.add: true
       craftcontrol.remove: true
+      craftcontrol.update: true
   craftcontrol.help: # Allows player to view the help for this plugin.
     default: false
   craftcontrol.list: # Allows the player to view a list of blacklisted items defined in the config.
@@ -24,4 +25,6 @@ permissions:
   craftcontrol.add: # Allows the player to add recipes to the blacklist.
     default: false
   craftcontrol.remove: # Allows the player to remove recipes from the blacklist.
+    default: false
+  craftcontrol.update: # Allows the player to recieve a plugin update notification when they join.
     default: false
