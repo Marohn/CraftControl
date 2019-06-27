@@ -19,7 +19,7 @@ public abstract class Updater extends BukkitRunnable {
     private static int projectId;
     private static String latest = "";
     
-    public Updater(int projectId) {
+    public Updater(final int projectId) {
         Updater.projectId = projectId;
     }
     
@@ -47,14 +47,14 @@ public abstract class Updater extends BukkitRunnable {
             final URL url = new URL("https://api.spigotmc.org/legacy/update.php?resource=" + projectId);
             final URLConnection connection = url.openConnection();
             
-            try (BufferedReader r = new BufferedReader(new InputStreamReader(connection.getInputStream()))) {
+            try (final BufferedReader r = new BufferedReader(new InputStreamReader(connection.getInputStream()))) {
                 latest = r.readLine();
             }
             
             if (updateAvailable()) {
                 onUpdateAvailable();
             }
-        } catch (IOException e) {
+        } catch (final IOException e) {
             e.printStackTrace();
         }
     }

@@ -3,28 +3,81 @@ main: ${mainClass}
 version: ${project.version}
 author: ${author}
 
+api-version: 1.13
+
 permissions:
-  craftcontrol.*: # Grants player all permissions for this plugin. Not recommended.
+  craftcontrol.*:
+    description: Grants player all permissions for this plugin. Not recommended.
     default: false
     children:
       craftcontrol.help: true
-      craftcontrol.list: true
-      craftcontrol.reload: true
+      craftcontrol.gui: true
       craftcontrol.bypass: true
-      craftcontrol.add: true
-      craftcontrol.remove: true
       craftcontrol.update: true
-  craftcontrol.help: # Allows player to view the help for this plugin.
+      craftcontrol.blacklist.*: true
+      craftcontrol.recipe.*: true
+      craftcontrol.itemfactory.*: true
+  craftcontrol.blacklist.*:
+    description: Grants player all permissions for /blacklist.
     default: false
-  craftcontrol.list: # Allows the player to view a list of blacklisted items defined in the config.
+    children:
+      craftcontrol.blacklist.add: true
+      craftcontrol.blacklist.remove: true
+      craftcontrol.blacklist.list: true
+  craftcontrol.recipe.*:
+    description: Grants player all permissions for /recipe.
     default: false
-  craftcontrol.reload: # Allows the player to reload the config.
+    children:
+      craftcontrol.recipe.add: true
+      craftcontrol.recipe.edit: true
+      craftcontrol.recipe.remove: true
+  craftcontrol.itemfactory.*:
+    description: Grants player all permissions for /itemfactory.
     default: false
-  craftcontrol.bypass: # Allows the player to bypass all crafting restrictions set by this plugin.
+    children:
+      craftcontrol.itemfactory.name: true
+      craftcontrol.itemfactory.lore: true
+      craftcontrol.itemfactory.enchant: true
+      craftcontrol.itemfactory.glow: true
+  craftcontrol.help:
+    description: Allows player to view the help for this plugin.
     default: false
-  craftcontrol.add: # Allows the player to add recipes to the blacklist.
+  craftcontrol.gui:
+    description: Allows the player to open the admin GUI.
     default: false
-  craftcontrol.remove: # Allows the player to remove recipes from the blacklist.
+  craftcontrol.bypass:
+    description: Allows the player to bypass all crafting restrictions set by this plugin.
     default: false
-  craftcontrol.update: # Allows the player to recieve a plugin update notification when they join.
+  craftcontrol.update:
+    description: Allows the player to recieve a plugin update notification when they join.
+    default: false
+  craftcontrol.blacklist.add:
+    description: Allows the player to add a blacklisted item.
+    default: false
+  craftcontrol.blacklist.remove:
+    description: Allows the player to remove a blacklisted item.
+    default: false
+  craftcontrol.blacklist.list:
+    description: Allows the player to view all blacklisted items.
+    default: false
+  craftcontrol.recipe.add:
+    description: Allows the player to add a custom recipe.
+    default: false
+  craftcontrol.recipe.edit:
+    description: Allows the player to edit a custom recipe.
+    default: false
+  craftcontrol.recipe.remove:
+    description: Allows the player to remove a custom recipe.
+    default: false
+  craftcontrol.itemfactory.name:
+    description: Allows the player to rename an item.
+    default: false
+  craftcontrol.itemfactory.lore:
+    description: Allows the player change the lore of an item.
+    default: false
+  craftcontrol.itemfactory.enchant:
+    description: Allows the player add an enchant to an item.
+    default: false
+  craftcontrol.itemfactory.glow:
+    description: Allows the player add/remove a glowing effect to an item.
     default: false
