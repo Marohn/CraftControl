@@ -166,7 +166,7 @@ public class ItemFactoryCommand extends Command {
                     return false;
                 }
     
-                Messages.sendMessage(p, "&bEdit line " + lineNumber + " of the lore!");
+                Messages.sendMessage(p, "&bEdited line " + lineNumber + " of the lore!");
                 return false;
             } else if ("remove".equalsIgnoreCase(action)) {
                 if (args.length < 3) {
