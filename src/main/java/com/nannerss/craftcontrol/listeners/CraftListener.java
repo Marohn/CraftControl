@@ -22,7 +22,6 @@ import org.bukkit.inventory.Recipe;
 import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.inventory.ShapelessRecipe;
 
-import com.nannerss.bananalib.messages.Console;
 import com.nannerss.craftcontrol.CraftControl;
 import com.nannerss.craftcontrol.data.CustomRecipe;
 import com.nannerss.craftcontrol.data.CustomRecipe.CustomRecipeType;
@@ -109,7 +108,7 @@ public class CraftListener implements Listener {
         for (Recipe recipe : CraftControl.getVanillaRecipes()) {
             if (recipe instanceof FurnaceRecipe) {
                 final FurnaceRecipe vanillaRecipe = (FurnaceRecipe) recipe;
-                Console.log(vanillaRecipe.getInput().toString());
+                
                 if (furnace.getInventory().getSmelting().isSimilar(vanillaRecipe.getInput()) || ((furnace.getInventory().getSmelting().getType().toString().contains("WOOD") || furnace.getInventory().getSmelting().getType().toString().contains("LOG")) && !furnace.getInventory().getSmelting().hasItemMeta())) {
                     return;
                 }
